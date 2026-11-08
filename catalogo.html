@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Equipo 1 - 4CM5">
+    <title>Catálogo | Tienda IPN </title>
+
+    <link rel="icon" href="img/logos/logo_equipo.png" type="image/png">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <!-- ===================== NAVEGACION ===================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/logos/logo_equipo.png" alt="Logo del Equipo 1">
+                <span class="ms-2 fs-5 fw-bold d-none d-sm-block">Tienda IPN</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Mostrar u ocultar la navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link activo" aria-current="page" href="catalogo.html">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inventario.html">Inventario</a></li>
+                    <li class="nav-item"><a class="nav-link" href="registro.html">Registro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin.html">Admin</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================== ENCABEZADO ===================== -->
+    <header class="encabezado-pagina">
+        <div class="container">
+            <h1>Catálogo de productos</h1>
+        </div>
+    </header>
+
+    <main class="container pb-4">
+
+        <!-- ===================== ROPA ===================== -->
+        <section id="ropa" class="mb-5">
+            <h2 class="mb-3">Ropa</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
+
+                <div class="col">
+                    <article class="card tarjeta-producto">
+                        <img src="img/productos/ESC-001.svg" class="card-img-top" alt="Chamarra ESCOM Azul" width="600" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <p class="codigo-producto mb-1">ESC-001</p>
+                            <h3 class="h6 card-title">Chamarra ESCOM Azul</h3>
+                            <p class="card-text small flex-grow-1">Chamarra institucional de poliéster con forro interior
+                                y logotipo bordado. Tallas CH a XG.</p>
+                            <p class="precio-producto mb-1">$599.00</p>
+                            <p class="mb-0"><span class="badge text-bg-success">18 en existencia</span></p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card tarjeta-producto">
+                        <img src="img/productos/ESC-002.svg" class="card-img-top" alt="Chamarra IPN Guinda" width="600" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <p class="codigo-producto mb-1">ESC-002</p>
+                            <h3 class="h6 card-title">Chamarra IPN Guinda</h3>
+                            <p class="card-text small flex-grow-1">Chamarra guinda con escudo del Politécnico en el pecho
+                                y cierre completo.</p>
+                            <p class="precio-producto mb-1">$549.00</p>
+                            <p class="mb-0"><span class="badge text-bg-success">12 en existencia</span></p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card tarjeta-producto">
+                        <img src="img/productos/ESC-003.svg" class="card-img-top" alt="Playera ESCOM Clásica" width="600" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <p class="codigo-producto mb-1">ESC-003</p>
+                            <h3 class="h6 card-title">Playera ESCOM Clásica</h3>
+                            <p class="card-text small flex-grow-1">Playera de algodón con el logotipo de la Escuela
+                                Superior de Cómputo serigrafiado.</p>
+                            <p class="precio-producto mb-1">$149.00</p>
+                            <p class="mb-0"><span class="badge text-bg-success">45 en existencia</span></p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card tarjeta-producto">
+                        <img src="img/productos/ESC-004.svg" class="card-img-top" alt="Playera IPN Huélum" width="600" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <p class="codigo-producto mb-1">ESC-004</p>
+                            <h3 class="h6 card-title">Playera IPN Huélum</h3>
+                            <p class="card-text small flex-grow-1">Playera guinda con la porra politécnica impresa en la
+                                espalda.</p>
+                            <p class="precio-producto mb-1">$139.00</p>
+                            <p class="mb-0"><span class="badge text-bg-success">38 en existencia</span></p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card tarjeta-producto">
+                        <img src="img/productos/ESC-005.svg" class="card-img-top" alt="Sudadera con Gorro ESCOM" width="600" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <p class="codigo-producto mb-1">ESC-005</p>
+                            <h3 class="h6 card-title">Sudadera con Gorro ESCOM</h3>
+                            <p class="card-text small flex-grow-1">Sudadera afelpada con gorro ajustable y bolsa
+                                canguro.</p>
+                            <p class="precio-producto mb-1">$399.00</p>
+                            <p class="mb-0"><span class="badge text-bg-success">22 en existencia</span></p>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================== ACCESORIOS ===================== -->
+        <section id="accesorios" class="mb-5">
+            <h2 class="mb-3">Accesorios</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
+
+                <div class="col">
+                    <article class="card tarjeta-producto">
+                        <img src="img/productos/ESC-006.svg" class="card-img-top" alt="Gorra IPN Bordada" width="600" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <p class="codigo-producto mb-1">ESC-006</p>
+                            <h3 class="h6 card-title">Gorra IPN Bordada</h3>
+                            <p class="card-text small flex-grow-1">Gorra ajustable con el escudo del IPN bordado al
+                                frente.</p>
+                            <p class="precio-producto mb-1">$129.00</p>
+                            <p class="mb-0"><span class="badge text-bg-success">30 en existencia</span></p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card tarjeta-producto">
+                        <img src="img/productos/ESC-007.svg" class="card-img-top" alt="Termo ESCOM 600 ml" width="600" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <p class="codigo-producto mb-1">ESC-007</p>
+                            <h3 class="h6 card-title">Termo ESCOM 600 ml</h3>
+                            <p class="card-text small flex-grow-1">Termo de acero inoxidable de doble pared que conserva
+                                la temperatura hasta 12 horas.</p>
+                            <p class="precio-producto mb-1">$179.00</p>
+                            <p class="mb-0"><span class="badge text-bg-success">25 en existencia</span></p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card tarjeta-producto">
+                        <img src="img/productos/ESC-008.svg" class="card-img-top" alt="Taza Politécnica" width="600" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <p class="codigo-producto mb-1">ESC-008</p>
+                            <h3 class="h6 card-title">Taza Politécnica</h3>
+                            <p class="card-text small flex-grow-1">Taza de cerámica de 350 ml con el escudo del
+                                Politécnico.</p>
+                            <p class="precio-producto mb-1">$79.00</p>
+                            <p class="mb-0"><span class="badge text-bg-success">60 en existencia</span></p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card tarjeta-producto">
+                        <img src="img/productos/ESC-009.svg" class="card-img-top" alt="Mochila ESCOM Antirrobo" width="600" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <p class="codigo-producto mb-1">ESC-009</p>
+                            <h3 class="h6 card-title">Mochila ESCOM Antirrobo</h3>
+                            <p class="card-text small flex-grow-1">Mochila con compartimento acolchado para laptop de 15
+                                pulgadas y puerto USB.</p>
+                            <p class="precio-producto mb-1">$499.00</p>
+                            <p class="mb-0"><span class="badge text-bg-danger">9 en existencia</span></p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card tarjeta-producto">
+                        <img src="img/productos/ESC-016.svg" class="card-img-top" alt="Paraguas IPN Guinda" width="600" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <p class="codigo-producto mb-1">ESC-016</p>
+                            <h3 class="h6 card-title">Paraguas IPN Guinda</h3>
+                            <p class="card-text small flex-grow-1">Paraguas automático de ocho varillas con el escudo
+                                institucional.</p>
+                            <p class="precio-producto mb-1">$179.00</p>
+                            <p class="mb-0"><span class="badge text-bg-danger">8 en existencia</span></p>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================== COLECCIONABLES ===================== -->
+        <section id="coleccionables" class="mb-5">
+            <h2 class="mb-3">Coleccionables</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
+
+                <div class="col">
+                    <article class="card tarjeta-producto">
+                        <img src="img/productos/ESC-010.svg" class="card-img-top" alt="Peluche Burrita Blanca" width="600" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <p class="codigo-producto mb-1">ESC-010</p>
+                            <h3 class="h6 card-title">Peluche Burrita Blanca</h3>
+                            <p class="card-text small flex-grow-1">Peluche de 30 cm de la mascota del Politécnico,
+                                relleno hipoalergénico.</p>
+                            <p class="precio-producto mb-1">$169.00</p>
+                            <p class="mb-0"><span class="badge text-bg-danger">7 en existencia</span></p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card tarjeta-producto">
+                        <img src="img/productos/ESC-011.svg" class="card-img-top" alt="Pin Metálico Escudo IPN" width="600" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <p class="codigo-producto mb-1">ESC-011</p>
+                            <h3 class="h6 card-title">Pin Metálico Escudo IPN</h3>
+                            <p class="card-text small flex-grow-1">Pin esmaltado de 2.5 cm con broche trasero de
+                                mariposa.</p>
+                            <p class="precio-producto mb-1">$25.00</p>
+                            <p class="mb-0"><span class="badge text-bg-success">120 en existencia</span></p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card tarjeta-producto">
+                        <img src="img/productos/ESC-012.svg" class="card-img-top" alt="Llavero Búho ESCOM" width="600" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <p class="codigo-producto mb-1">ESC-012</p>
+                            <h3 class="h6 card-title">Llavero Búho ESCOM</h3>
+                            <p class="card-text small flex-grow-1">Llavero de acrílico con la figura del búho, símbolo
+                                de la escuela.</p>
+                            <p class="precio-producto mb-1">$39.00</p>
+                            <p class="mb-0"><span class="badge text-bg-success">54 en existencia</span></p>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================== PAPELERIA ===================== -->
+        <section id="papeleria" class="mb-5">
+            <h2 class="mb-3">Papelería</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
+
+                <div class="col">
+                    <article class="card tarjeta-producto">
+                        <img src="img/productos/ESC-013.svg" class="card-img-top" alt="Cuaderno Profesional ESCOM" width="600" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <p class="codigo-producto mb-1">ESC-013</p>
+                            <h3 class="h6 card-title">Cuaderno Profesional ESCOM</h3>
+                            <p class="card-text small flex-grow-1">Cuaderno de 100 hojas cuadriculadas con pasta dura
+                                institucional.</p>
+                            <p class="precio-producto mb-1">$49.00</p>
+                            <p class="mb-0"><span class="badge text-bg-success">80 en existencia</span></p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card tarjeta-producto">
+                        <img src="img/productos/ESC-014.svg" class="card-img-top" alt="Pluma Metálica IPN" width="600" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <p class="codigo-producto mb-1">ESC-014</p>
+                            <h3 class="h6 card-title">Pluma Metálica IPN</h3>
+                            <p class="card-text small flex-grow-1">Pluma de cuerpo metálico con grabado láser del nombre
+                                del Instituto.</p>
+                            <p class="precio-producto mb-1">$25.00</p>
+                            <p class="mb-0"><span class="badge text-bg-danger">5 en existencia</span></p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card tarjeta-producto">
+                        <img src="img/productos/ESC-015.svg" class="card-img-top" alt="Calcomanías ESCOM" width="600" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <p class="codigo-producto mb-1">ESC-015</p>
+                            <h3 class="h6 card-title">Calcomanías ESCOM</h3>
+                            <p class="card-text small flex-grow-1">Paquete de 10 calcomanías resistentes al agua para
+                                laptop o cuaderno.</p>
+                            <p class="precio-producto mb-1">$25.00</p>
+                            <p class="mb-0"><span class="badge text-bg-success">95 en existencia</span></p>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===================== PIE DE PAGINA ===================== -->
+    <footer>
+        <div class="container contenedor-footer">
+            <img src="img/logos/logo_ipn.png" alt="Logo del Instituto Politécnico Nacional" class="imagen-footer">
+
+            <div class="contenedor-central-footer">
+                <div class="bloque-texto">
+                    <p class="mb-0">Tienda IPN | Instituto Politécnico Nacional - ESCOM &copy; 2026</p>
+                    <small>Desarrollado para la materia Tecnologías para el Desarrollo de Aplicaciones Web</small>
+                </div>
+                <div class="bloque-redes">
+                    <small class="fw-bold">Redes sociales</small>
+                    <ul class="list-unstyled mb-0 lista-redes-footer">
+                        <li><a href="https://www.facebook.com/share/1BSBQNFr3F/" class="footer-link"
+                                target="_blank" rel="noopener noreferrer">Facebook: escomipnmx</a></li>
+                        <li><a href="https://www.instagram.com/escom_ipn_mx" class="footer-link" target="_blank"
+                                rel="noopener noreferrer">Instagram: escom_ipn_mx</a></li>
+                        <li><a href="https://www.tiktok.com/@escom_ipn_mx" class="footer-link" target="_blank"
+                                rel="noopener noreferrer">TikTok: escom_ipn_mx</a></li>
+                        <li><a href="https://x.com/escomunidad/" class="footer-link" target="_blank"
+                                rel="noopener noreferrer">Twitter: @escomunidad</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-2">
+                <img src="img/logos/logo_equipo.png" alt="Logo del equipo" class="imagen-footer">
+                <img src="img/logos/logo_escom.png" alt="Logo ESCOM" class="imagen-footer logo-escom-footer">
+            </div>
+        </div>
+    </footer>
+
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

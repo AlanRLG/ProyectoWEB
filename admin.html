@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Equipo 1 - 4CM5">
+    <title>Administrador | Tienda IPN </title>
+
+    <link rel="icon" href="img/logos/logo_equipo.png" type="image/png">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <!-- ===================== NAVEGACION ===================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/logos/logo_equipo.png" alt="Logo del Equipo 1">
+                <span class="ms-2 fs-5 fw-bold d-none d-sm-block">Tienda IPN</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Mostrar u ocultar la navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inventario.html">Inventario</a></li>
+                    <li class="nav-item"><a class="nav-link" href="registro.html">Registro</a></li>
+                    <li class="nav-item"><a class="nav-link activo" aria-current="page" href="admin.html">Admin</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================== ENCABEZADO ===================== -->
+    <header class="encabezado-pagina">
+        <div class="container">
+            <h1>Sección de administración</h1>
+            </div>
+    </header>
+
+    <main class="container pb-4">
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+                <section class="panel-formulario">
+                    <div class="text-center mb-4">
+                        <img src="img/logos/logo_equipo.png" alt="Logo del Equipo 1" class="rounded shadow-sm"
+                            width="100" height="90" style="object-fit: cover;">
+                        <h2 class="mt-3 mb-1">Iniciar sesión</h2>
+                        <p class="text-muted mb-0">Ingresa tus datos de acceso de administrador.</p>
+                    </div>
+
+                    <form id="formAdmin" novalidate>
+                        <div class="mb-3">
+                            <label for="correoAdmin" class="form-label">
+                                Correo electrónico <span class="obligatorio" aria-hidden="true">*</span>
+                            </label>
+                            <input type="email" class="form-control" id="correoAdmin" name="correoAdmin"
+                                placeholder="administrador@escom.ipn.mx" autocomplete="username"
+                                aria-describedby="errorCorreoAdmin">
+                            <p class="mensaje-error" id="errorCorreoAdmin" role="alert"></p>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="contrasenaAdmin" class="form-label">
+                                Contraseña <span class="obligatorio" aria-hidden="true">*</span>
+                            </label>
+                            <input type="password" class="form-control" id="contrasenaAdmin" name="contrasenaAdmin"
+                                placeholder="Mínimo 6 caracteres" autocomplete="current-password"
+                                aria-describedby="errorContrasenaAdmin ayudaContrasena">
+                            <div id="ayudaContrasena" class="form-text">Debe contener al menos 6 caracteres.</div>
+                            <p class="mensaje-error" id="errorContrasenaAdmin" role="alert"></p>
+                        </div>
+
+                        <button type="submit" class="btn btn-guinda w-100 py-2">Ingresar al panel</button>
+                    </form>
+
+                    <div id="resumenAcceso" class="mt-4">
+                        <div class="alert alert-success mb-0" role="status">
+                            <h3 class="h6 alert-heading">Acceso simulado correcto</h3>
+                            <p class="mb-1">Bienvenido, administrador.</p>
+                            <p class="mb-0 small">Correo ingresado: <strong id="salidaCorreoAdmin"></strong></p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ===================== PIE DE PAGINA ===================== -->
+    <footer>
+        <div class="container contenedor-footer">
+            <img src="img/logos/logo_ipn.png" alt="Logo del Instituto Politécnico Nacional" class="imagen-footer">
+
+            <div class="contenedor-central-footer">
+                <div class="bloque-texto">
+                    <p class="mb-0">Tienda IPN | Instituto Politécnico Nacional - ESCOM &copy; 2026</p>
+                    <small>Desarrollado para la materia Tecnologías para el Desarrollo de Aplicaciones Web</small>
+                </div>
+                <div class="bloque-redes">
+                    <small class="fw-bold">Redes sociales</small>
+                    <ul class="list-unstyled mb-0 lista-redes-footer">
+                        <li><a href="https://www.facebook.com/share/1BSBQNFr3F/" class="footer-link"
+                                target="_blank" rel="noopener noreferrer">Facebook: escomipnmx</a></li>
+                        <li><a href="https://www.instagram.com/escom_ipn_mx" class="footer-link" target="_blank"
+                                rel="noopener noreferrer">Instagram: escom_ipn_mx</a></li>
+                        <li><a href="https://www.tiktok.com/@escom_ipn_mx" class="footer-link" target="_blank"
+                                rel="noopener noreferrer">TikTok: escom_ipn_mx</a></li>
+                        <li><a href="https://x.com/escomunidad/" class="footer-link" target="_blank"
+                                rel="noopener noreferrer">Twitter: @escomunidad</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-2">
+                <img src="img/logos/logo_equipo.png" alt="Logo del equipo" class="imagen-footer">
+                <img src="img/logos/logo_escom.png" alt="Logo ESCOM" class="imagen-footer logo-escom-footer">
+            </div>
+        </div>
+    </footer>
+
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/validaciones.js"></script>
+</body>
+
+</html>

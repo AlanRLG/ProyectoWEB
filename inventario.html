@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Equipo 1 - 4CM5">
+    <title>Inventario | Tienda ESCOM - Control de Inventario</title>
+
+    <link rel="icon" href="img/logos/logo_equipo.png" type="image/png">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <!-- ===================== NAVEGACION ===================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/logos/logo_equipo.png" alt="Logo del Equipo 1">
+                <span class="ms-2 fs-5 fw-bold d-none d-sm-block">Tienda IPN</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Mostrar u ocultar la navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link activo" aria-current="page" href="inventario.html">Inventario</a></li>
+                    <li class="nav-item"><a class="nav-link" href="registro.html">Registro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin.html">Admin</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================== ENCABEZADO ===================== -->
+    <header class="encabezado-pagina">
+        <div class="container">
+            <h1>Tabla de inventario</h1>
+        </div>
+    </header>
+
+    <main class="container pb-4">
+
+        <!-- ===================== RESUMEN ===================== -->
+        <section id="resumen" class="mb-4">
+            <h2 class="mb-3">Resumen</h2>
+            <div class="row g-3">
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card tarjeta-indicador">
+                        <div class="card-body">
+                            <p class="etiqueta-indicador mb-1">Registros</p>
+                            <p class="valor-indicador mb-0">16</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card tarjeta-indicador acento-azul">
+                        <div class="card-body">
+                            <p class="etiqueta-indicador mb-1">Piezas totales</p>
+                            <p class="valor-indicador mb-0">628</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card tarjeta-indicador acento-dorado">
+                        <div class="card-body">
+                            <p class="etiqueta-indicador mb-1">Valor total</p>
+                            <p class="valor-indicador mb-0">$69,852</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card tarjeta-indicador acento-roja">
+                        <div class="card-body">
+                            <p class="etiqueta-indicador mb-1">Bajo mínimo</p>
+                            <p class="valor-indicador mb-0">4</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== TABLA GENERAL ===================== -->
+        <section id="tabla-general" class="mb-5">
+            <h2 class="mb-3">Inventario general</h2>
+
+            <div class="table-responsive shadow-sm rounded bg-white">
+                <table class="table table-striped table-hover align-middle mb-0 tabla-inventario">
+                    <thead>
+                        <tr>
+                            <th scope="col">Código</th>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Categoría</th>
+                            <th scope="col" class="text-end">Precio</th>
+                            <th scope="col" class="text-center">Existencias</th>
+                            <th scope="col" class="text-end">Valor en almacén</th>
+                            <th scope="col" class="text-center">Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="codigo-producto">ESC-001</th>
+                            <td>Chamarra ESCOM Azul</td>
+                            <td>Ropa</td>
+                            <td class="text-end">$599.00</td>
+                            <td class="text-center">18</td>
+                            <td class="text-end">$10,782.00</td>
+                            <td class="text-center"><span class="badge text-bg-success">Disponible</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="codigo-producto">ESC-002</th>
+                            <td>Chamarra IPN Guinda</td>
+                            <td>Ropa</td>
+                            <td class="text-end">$549.00</td>
+                            <td class="text-center">12</td>
+                            <td class="text-end">$6,588.00</td>
+                            <td class="text-center"><span class="badge text-bg-success">Disponible</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="codigo-producto">ESC-003</th>
+                            <td>Playera ESCOM Clásica</td>
+                            <td>Ropa</td>
+                            <td class="text-end">$149.00</td>
+                            <td class="text-center">45</td>
+                            <td class="text-end">$6,705.00</td>
+                            <td class="text-center"><span class="badge text-bg-success">Disponible</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="codigo-producto">ESC-004</th>
+                            <td>Playera IPN Huélum</td>
+                            <td>Ropa</td>
+                            <td class="text-end">$139.00</td>
+                            <td class="text-center">38</td>
+                            <td class="text-end">$5,282.00</td>
+                            <td class="text-center"><span class="badge text-bg-success">Disponible</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="codigo-producto">ESC-005</th>
+                            <td>Sudadera con Gorro ESCOM</td>
+                            <td>Ropa</td>
+                            <td class="text-end">$399.00</td>
+                            <td class="text-center">22</td>
+                            <td class="text-end">$8,778.00</td>
+                            <td class="text-center"><span class="badge text-bg-success">Disponible</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="codigo-producto">ESC-006</th>
+                            <td>Gorra IPN Bordada</td>
+                            <td>Accesorios</td>
+                            <td class="text-end">$129.00</td>
+                            <td class="text-center">30</td>
+                            <td class="text-end">$3,870.00</td>
+                            <td class="text-center"><span class="badge text-bg-success">Disponible</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="codigo-producto">ESC-007</th>
+                            <td>Termo ESCOM 600 ml</td>
+                            <td>Accesorios</td>
+                            <td class="text-end">$179.00</td>
+                            <td class="text-center">25</td>
+                            <td class="text-end">$4,475.00</td>
+                            <td class="text-center"><span class="badge text-bg-success">Disponible</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="codigo-producto">ESC-008</th>
+                            <td>Taza Politécnica</td>
+                            <td>Accesorios</td>
+                            <td class="text-end">$79.00</td>
+                            <td class="text-center">60</td>
+                            <td class="text-end">$4,740.00</td>
+                            <td class="text-center"><span class="badge text-bg-success">Disponible</span></td>
+                        </tr>
+                        <tr class="fila-existencia-baja">
+                            <th scope="row" class="codigo-producto">ESC-009</th>
+                            <td>Mochila ESCOM Antirrobo</td>
+                            <td>Accesorios</td>
+                            <td class="text-end">$499.00</td>
+                            <td class="text-center">9</td>
+                            <td class="text-end">$4,491.00</td>
+                            <td class="text-center"><span class="badge text-bg-danger">Existencia baja</span></td>
+                        </tr>
+                        <tr class="fila-existencia-baja">
+                            <th scope="row" class="codigo-producto">ESC-010</th>
+                            <td>Peluche Burrita Blanca</td>
+                            <td>Coleccionables</td>
+                            <td class="text-end">$169.00</td>
+                            <td class="text-center">7</td>
+                            <td class="text-end">$1,183.00</td>
+                            <td class="text-center"><span class="badge text-bg-danger">Existencia baja</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="codigo-producto">ESC-011</th>
+                            <td>Pin Metálico Escudo IPN</td>
+                            <td>Coleccionables</td>
+                            <td class="text-end">$25.00</td>
+                            <td class="text-center">120</td>
+                            <td class="text-end">$3,000.00</td>
+                            <td class="text-center"><span class="badge text-bg-success">Disponible</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="codigo-producto">ESC-012</th>
+                            <td>Llavero Búho ESCOM</td>
+                            <td>Coleccionables</td>
+                            <td class="text-end">$39.00</td>
+                            <td class="text-center">54</td>
+                            <td class="text-end">$2,106.00</td>
+                            <td class="text-center"><span class="badge text-bg-success">Disponible</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="codigo-producto">ESC-013</th>
+                            <td>Cuaderno Profesional ESCOM</td>
+                            <td>Papelería</td>
+                            <td class="text-end">$49.00</td>
+                            <td class="text-center">80</td>
+                            <td class="text-end">$3,920.00</td>
+                            <td class="text-center"><span class="badge text-bg-success">Disponible</span></td>
+                        </tr>
+                        <tr class="fila-existencia-baja">
+                            <th scope="row" class="codigo-producto">ESC-014</th>
+                            <td>Pluma Metálica IPN</td>
+                            <td>Papelería</td>
+                            <td class="text-end">$25.00</td>
+                            <td class="text-center">5</td>
+                            <td class="text-end">$125.00</td>
+                            <td class="text-center"><span class="badge text-bg-danger">Existencia baja</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="codigo-producto">ESC-015</th>
+                            <td>Calcomanías ESCOM</td>
+                            <td>Papelería</td>
+                            <td class="text-end">$25.00</td>
+                            <td class="text-center">95</td>
+                            <td class="text-end">$2,375.00</td>
+                            <td class="text-center"><span class="badge text-bg-success">Disponible</span></td>
+                        </tr>
+                        <tr class="fila-existencia-baja">
+                            <th scope="row" class="codigo-producto">ESC-016</th>
+                            <td>Paraguas IPN Guinda</td>
+                            <td>Accesorios</td>
+                            <td class="text-end">$179.00</td>
+                            <td class="text-center">8</td>
+                            <td class="text-end">$1,432.00</td>
+                            <td class="text-center"><span class="badge text-bg-danger">Existencia baja</span></td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="table-group-divider fw-bold">
+                        <tr>
+                            <td colspan="4" class="text-end">Totales</td>
+                            <td class="text-center">628</td>
+                            <td class="text-end">$69,852.00</td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <!-- ===================== EXISTENCIAS BAJAS ===================== -->
+        <section id="existencias-bajas" class="mb-5">
+            <h2 class="mb-3">Productos con existencias bajas</h2>
+
+            <div class="table-responsive shadow-sm rounded bg-white">
+                <table class="table table-hover align-middle mb-0 tabla-inventario tabla-existencias">
+                    <caption class="px-3 pb-3">Detalle de resurtido sugerido para los cuatro productos que están por
+                        debajo del mínimo de 10 piezas.</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Código</th>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Categoría</th>
+                            <th scope="col" class="text-center">Existencias</th>
+                            <th scope="col" class="text-center">Mínimo</th>
+                            <th scope="col" class="text-center">Faltante</th>
+                            <th scope="col" class="text-center">Prioridad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="fila-existencia-baja">
+                            <th scope="row" class="codigo-producto">ESC-014</th>
+                            <td>Pluma Metálica IPN</td>
+                            <td>Papelería</td>
+                            <td class="text-center">5</td>
+                            <td class="text-center">10</td>
+                            <td class="text-center">5</td>
+                            <td class="text-center"><span class="badge text-bg-danger">Alta</span></td>
+                        </tr>
+                        <tr class="fila-existencia-baja">
+                            <th scope="row" class="codigo-producto">ESC-010</th>
+                            <td>Peluche Burrita Blanca</td>
+                            <td>Coleccionables</td>
+                            <td class="text-center">7</td>
+                            <td class="text-center">10</td>
+                            <td class="text-center">3</td>
+                            <td class="text-center"><span class="badge text-bg-warning">Media</span></td>
+                        </tr>
+                        <tr class="fila-existencia-baja">
+                            <th scope="row" class="codigo-producto">ESC-016</th>
+                            <td>Paraguas IPN Guinda</td>
+                            <td>Accesorios</td>
+                            <td class="text-center">8</td>
+                            <td class="text-center">10</td>
+                            <td class="text-center">2</td>
+                            <td class="text-center"><span class="badge text-bg-warning">Media</span></td>
+                        </tr>
+                        <tr class="fila-existencia-baja">
+                            <th scope="row" class="codigo-producto">ESC-009</th>
+                            <td>Mochila ESCOM Antirrobo</td>
+                            <td>Accesorios</td>
+                            <td class="text-center">9</td>
+                            <td class="text-center">10</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center"><span class="badge text-bg-warning">Media</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===================== PIE DE PAGINA ===================== -->
+    <footer>
+        <div class="container contenedor-footer">
+            <img src="img/logos/logo_ipn.png" alt="Logo del Instituto Politécnico Nacional" class="imagen-footer">
+
+            <div class="contenedor-central-footer">
+                <div class="bloque-texto">
+                    <p class="mb-0">Tienda IPN | Instituto Politécnico Nacional - ESCOM &copy; 2026</p>
+                    <small>Desarrollado para la materia Tecnologías para el Desarrollo de Aplicaciones Web</small>
+                </div>
+                <div class="bloque-redes">
+                    <small class="fw-bold">Redes sociales</small>
+                    <ul class="list-unstyled mb-0 lista-redes-footer">
+                        <li><a href="https://www.facebook.com/share/1BSBQNFr3F/" class="footer-link"
+                                target="_blank" rel="noopener noreferrer">Facebook: escomipnmx</a></li>
+                        <li><a href="https://www.instagram.com/escom_ipn_mx" class="footer-link" target="_blank"
+                                rel="noopener noreferrer">Instagram: escom_ipn_mx</a></li>
+                        <li><a href="https://www.tiktok.com/@escom_ipn_mx" class="footer-link" target="_blank"
+                                rel="noopener noreferrer">TikTok: escom_ipn_mx</a></li>
+                        <li><a href="https://x.com/escomunidad/" class="footer-link" target="_blank"
+                                rel="noopener noreferrer">Twitter: @escomunidad</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-2">
+                <img src="img/logos/logo_equipo.png" alt="Logo del equipo" class="imagen-footer">
+                <img src="img/logos/logo_escom.png" alt="Logo ESCOM" class="imagen-footer logo-escom-footer">
+            </div>
+        </div>
+    </footer>
+
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

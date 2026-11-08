@@ -1,0 +1,8 @@
+# Documentos y capturas de apoyo para la entrega.
+# No es necesario subirlos al repositorio.
+/docs/
+/evidencias/
+
+# Archivos temporales del sistema operativo.
+Thumbs.db
+desktop.ini

@@ -1,0 +1,574 @@
+/* ---------- 1. Base de la pagina ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #343a40;
+}
+
+main {
+    flex: 1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 700;
+    color: #6b1c3a;
+}
+
+a {
+    color: #075ab8;
+}
+
+a:hover {
+    color: #0a6fdc;
+}
+
+/* ---------- 2. Barra de navegacion ---------- */
+
+.navbar {
+    background-color: #6b1c3a;
+}
+
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+    margin-right: 2px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    padding: 2px;
+}
+
+.navbar .nav-link {
+    font-weight: 600;
+}
+
+.navbar .nav-link.activo {
+    border-bottom: 3px solid #ffffff;
+}
+
+/* ---------- 3. Pie de pagina ---------- */
+
+footer {
+    background-color: #6b1c3a;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+.contenedor-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+
+.imagen-footer {
+    max-height: 100px;
+    width: auto;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+/* El logotipo de ESCOM es blanco: se muestra sin caja para que se vea sobre el guinda */
+.imagen-footer.logo-escom-footer {
+    background-color: transparent;
+    padding: 0;
+    max-height: 100px;
+}
+
+.texto-central {
+    text-align: center;
+}
+
+.contenedor-central-footer {
+    flex: 1;
+    max-width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+.bloque-texto {
+    text-align: left;
+}
+
+.bloque-redes {
+    text-align: center;
+}
+
+.lista-redes-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.footer-link {
+    color: inherit;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/* ---------- 4. Carrusel de ofertas ---------- */
+
+.carousel-item {
+    height: 400px;
+    background-color: #6b1c3a;
+}
+
+.carousel-item:nth-child(even) {
+    background-color: #075ab8;
+}
+
+/* La ilustracion de la oferta ocupa todo el espacio sin deformarse */
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 24px;
+    text-align: center;
+}
+
+.carousel-caption h3 {
+    color: #ffffff;
+    font-size: 2.25rem;
+}
+
+.etiqueta-oferta {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ffd166;
+}
+
+.precio-anterior {
+    text-decoration: line-through;
+    opacity: 0.8;
+    margin-right: 8px;
+}
+
+.precio-oferta {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffd166;
+}
+
+/* ---------- 5. Encabezado de pagina ---------- */
+
+.encabezado-pagina {
+    background-color: #6b1c3a;
+    color: #ffffff;
+    padding: 30px 0;
+    margin-bottom: 30px;
+}
+
+.encabezado-pagina h1,
+.encabezado-pagina p {
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+/* ---------- 6. Tarjetas de indicadores y de producto ---------- */
+
+.tarjeta-indicador {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    text-align: center;
+}
+
+.tarjeta-indicador .valor-indicador {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #6b1c3a;
+    line-height: 1.1;
+}
+
+.tarjeta-indicador.acento-azul .valor-indicador {
+    color: #075ab8;
+}
+
+.tarjeta-indicador.acento-dorado .valor-indicador {
+    color: #b8860b;
+}
+
+.tarjeta-indicador.acento-roja .valor-indicador {
+    color: #b02a37;
+}
+
+.tarjeta-indicador .etiqueta-indicador {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #6c757d;
+}
+
+.tarjeta-producto {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* La ilustracion del producto se limita en alto y se centra dentro de la tarjeta */
+.tarjeta-producto .card-img-top {
+    width: 100%;
+    height: 190px;
+    padding: 8px;
+    object-fit: contain;
+    background-color: #e8eef7;
+    border-bottom: 1px solid #dce3ee;
+}
+
+.precio-producto {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #6b1c3a;
+}
+
+.codigo-producto {
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+/* ---------- 7. Botones con la identidad del proyecto ---------- */
+
+.btn-guinda {
+    background-color: #6b1c3a;
+    border-color: #6b1c3a;
+    color: #ffffff;
+}
+
+.btn-guinda:hover,
+.btn-guinda:focus {
+    background-color: #8a2649;
+    border-color: #8a2649;
+    color: #ffffff;
+}
+
+.btn-escom {
+    background-color: #075ab8;
+    border-color: #075ab8;
+    color: #ffffff;
+}
+
+.btn-escom:hover,
+.btn-escom:focus {
+    background-color: #0a6fdc;
+    border-color: #0a6fdc;
+    color: #ffffff;
+}
+
+/* ---------- 8. Tablas de inventario ---------- */
+
+.tabla-inventario thead {
+    background-color: #6b1c3a;
+    color: #ffffff;
+}
+
+.tabla-inventario th,
+.tabla-inventario td {
+    vertical-align: middle;
+}
+
+.fila-existencia-baja {
+    background-color: #fff4f4;
+}
+
+/* ---------- 9. Formularios y mensajes de validacion ---------- */
+
+.panel-formulario {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding: 28px;
+}
+
+.panel-formulario .card-header {
+    background-color: #6b1c3a;
+    color: #ffffff;
+}
+
+.form-label {
+    font-weight: 600;
+}
+
+.obligatorio {
+    color: #b02a37;
+    font-weight: 700;
+}
+
+.mensaje-error {
+    display: none;
+    color: #b02a37;
+    font-size: 0.875rem;
+    margin-top: 4px;
+}
+
+.mensaje-error.visible {
+    display: block;
+}
+
+.campo-invalido {
+    border-color: #b02a37;
+    background-color: #fff6f6;
+}
+
+.campo-valido {
+    border-color: #198754;
+}
+
+#resumenDatos {
+    display: none;
+}
+
+#resumenDatos.visible {
+    display: block;
+}
+
+#resumenAcceso {
+    display: none;
+}
+
+#resumenAcceso.visible {
+    display: block;
+}
+
+/* ---------- 10. Informacion de la pagina de inicio ---------- */
+
+.seccion-informativa {
+    margin-top: 48px;
+}
+
+.tarjeta-informativa {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    height: 100%;
+}
+
+.tarjeta-informativa .card-title {
+    font-size: 1.15rem;
+}
+
+/* ---------- 11. Ajustes responsivos ---------- */
+
+/* Moviles y tabletas: el pie se apila, el carrusel baja de alto y las tablas se convierten en fichas */
+@media (max-width: 768px) {
+    .contenedor-footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contenedor-central-footer {
+        max-width: 100%;
+        flex-direction: column;
+    }
+
+    .bloque-texto {
+        text-align: center;
+    }
+
+    .carousel-item {
+        height: 260px;
+    }
+
+    .carousel-caption {
+        padding: 12px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 1.4rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+        margin-bottom: 0;
+    }
+
+    .precio-oferta {
+        font-size: 1.1rem;
+    }
+
+    .encabezado-pagina {
+        padding: 20px 0;
+        margin-bottom: 20px;
+    }
+
+    .panel-formulario {
+        padding: 18px;
+    }
+
+    .tarjeta-indicador .valor-indicador {
+        font-size: 1.6rem;
+    }
+
+    .tarjeta-producto .card-img-top {
+        height: 160px;
+    }
+
+    .tabla-inventario thead {
+        display: none;
+    }
+
+    .tabla-inventario,
+    .tabla-inventario tbody,
+    .tabla-inventario tfoot,
+    .tabla-inventario tr,
+    .tabla-inventario th,
+    .tabla-inventario td {
+        display: block;
+        width: 100%;
+    }
+
+    .tabla-inventario tbody tr {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 8px 12px;
+        margin-bottom: 12px;
+        background-color: #ffffff;
+    }
+
+    .tabla-inventario tbody tr:last-child {
+        margin-bottom: 0;
+    }
+
+    .tabla-inventario tbody tr.fila-existencia-baja {
+        background-color: #fff4f4;
+    }
+
+    .tabla-inventario tbody tr > * {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        padding: 6px 0;
+        border: none;
+        text-align: right;
+        background-color: transparent !important;
+        box-shadow: none !important;
+    }
+
+    .tabla-inventario tbody tr > *::before {
+        font-weight: 600;
+        color: #6b1c3a;
+        text-align: left;
+    }
+
+    .tabla-inventario tbody tr > :nth-child(1)::before {
+        content: "Código";
+    }
+
+    .tabla-inventario tbody tr > :nth-child(2)::before {
+        content: "Producto";
+    }
+
+    .tabla-inventario tbody tr > :nth-child(3)::before {
+        content: "Categoría";
+    }
+
+    .tabla-inventario tbody tr > :nth-child(4)::before {
+        content: "Precio";
+    }
+
+    .tabla-inventario tbody tr > :nth-child(5)::before {
+        content: "Existencias";
+    }
+
+    .tabla-inventario tbody tr > :nth-child(6)::before {
+        content: "Valor en almacén";
+    }
+
+    .tabla-inventario tbody tr > :nth-child(7)::before {
+        content: "Estado";
+    }
+
+    /* La segunda tabla tiene columnas distintas */
+    .tabla-inventario.tabla-existencias tbody tr > :nth-child(4)::before {
+        content: "Existencias";
+    }
+
+    .tabla-inventario.tabla-existencias tbody tr > :nth-child(5)::before {
+        content: "Mínimo";
+    }
+
+    .tabla-inventario.tabla-existencias tbody tr > :nth-child(6)::before {
+        content: "Faltante";
+    }
+
+    .tabla-inventario.tabla-existencias tbody tr > :nth-child(7)::before {
+        content: "Prioridad";
+    }
+
+    .tabla-inventario tfoot tr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 10px 12px;
+        background-color: #ffffff;
+    }
+
+    .tabla-inventario tfoot td {
+        text-align: center !important;
+    }
+
+    .tabla-inventario tfoot td:empty {
+        display: none;
+    }
+}
+
+/* Tabletas horizontales: el carrusel gana altura */
+@media (min-width: 769px) and (max-width: 992px) {
+    .carousel-item {
+        height: 320px;
+    }
+}

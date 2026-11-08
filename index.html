@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Equipo 1 - 4CM5">
+    <title>Inicio | Tienda IPN </title>
+
+    <link rel="icon" href="img/logos/logo_equipo.png" type="image/png">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <!-- ===================== NAVEGACION ===================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/logos/logo_equipo.png" alt="Logo del Equipo 1">
+                <span class="ms-2 fs-5 fw-bold d-none d-sm-block">Tienda IPN</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Mostrar u ocultar la navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link activo" aria-current="page" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inventario.html">Inventario</a></li>
+                    <li class="nav-item"><a class="nav-link" href="registro.html">Registro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin.html">Admin</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================== CARRUSEL DE OFERTAS ===================== -->
+    <main class="container my-5">
+        <h1 class="visually-hidden">Ofertas de la semana de la Tienda ESCOM</h1>
+
+        <div id="carruselOfertas" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carruselOfertas" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Oferta 1: Chamarra ESCOM"></button>
+                <button type="button" data-bs-target="#carruselOfertas" data-bs-slide-to="1"
+                    aria-label="Oferta 2: Sudadera ESCOM"></button>
+                <button type="button" data-bs-target="#carruselOfertas" data-bs-slide-to="2"
+                    aria-label="Oferta 3: Termo ESCOM"></button>
+                <button type="button" data-bs-target="#carruselOfertas" data-bs-slide-to="3"
+                    aria-label="Oferta 4: Peluche Burrita Blanca"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/productos/oferta-1.svg" class="d-block w-100" alt="Chamarra ESCOM">
+                    <div class="carousel-caption">
+                        <p class="etiqueta-oferta mb-2">Oferta de la semana</p>
+                        <h3>Chamarra ESCOM</h3>
+                        <p class="d-none d-sm-block mb-1">Chamarra institucional con logotipo bordado, tallas CH a XG.</p>
+                        <p class="mb-0">
+                            <span class="precio-anterior">$599.00</span>
+                            <span class="precio-oferta">$499.00</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/productos/oferta-2.svg" class="d-block w-100" alt="Sudadera con Gorro ESCOM">
+                    <div class="carousel-caption">
+                        <p class="etiqueta-oferta mb-2">Oferta de la semana</p>
+                        <h3>Sudadera con Gorro ESCOM</h3>
+                        <p class="d-none d-sm-block mb-1">Tela afelpada con logotipo bordado al frente.</p>
+                        <p class="mb-0">
+                            <span class="precio-anterior">$399.00</span>
+                            <span class="precio-oferta">$329.00</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/productos/oferta-3.svg" class="d-block w-100" alt="Termo ESCOM 600 ml">
+                    <div class="carousel-caption">
+                        <p class="etiqueta-oferta mb-2">Oferta de la semana</p>
+                        <h3>Termo ESCOM 600 ml</h3>
+                        <p class="d-none d-sm-block mb-1">Acero inoxidable de doble pared, 12 horas de temperatura.</p>
+                        <p class="mb-0">
+                            <span class="precio-anterior">$179.00</span>
+                            <span class="precio-oferta">$149.00</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/productos/oferta-4.svg" class="d-block w-100" alt="Peluche Burrita Blanca">
+                    <div class="carousel-caption">
+                        <p class="etiqueta-oferta mb-2">Oferta de la semana</p>
+                        <h3>Peluche Burrita Blanca</h3>
+                        <p class="d-none d-sm-block mb-1">La mascota del Politécnico en peluche de 30 cm.</p>
+                        <p class="mb-0">
+                            <span class="precio-anterior">$169.00</span>
+                            <span class="precio-oferta">$139.00</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carruselOfertas" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carruselOfertas" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+
+        <!-- ===================== INFORMACION DE LA TIENDA ===================== -->
+        <section class="seccion-informativa">
+            <h2 class="mb-3">Bienvenido a la Tienda ESCOM</h2>
+            <p class="text-muted mb-4">
+                La Tienda ESCOM reúne artículos institucionales del Instituto Politécnico Nacional:
+                ropa, accesorios, papelería y coleccionables. En este sitio puedes consultar el
+                catálogo, revisar las existencias del inventario y conocer las ofertas de la semana.
+            </p>
+
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <article class="card tarjeta-informativa">
+                        <div class="card-body">
+                            <h3 class="card-title">Catálogo de productos</h3>
+                            <p class="card-text small">
+                                Consulta los 16 artículos disponibles, organizados por categoría,
+                                con su precio y su existencia actual.
+                            </p>
+                            <a href="catalogo.html" class="btn btn-guinda btn-sm">Ver catálogo</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <article class="card tarjeta-informativa">
+                        <div class="card-body">
+                            <h3 class="card-title">Control de inventario</h3>
+                            <p class="card-text small">
+                                Revisa las piezas disponibles, el valor total en almacén y los
+                                productos que se encuentran por debajo del mínimo.
+                            </p>
+                            <a href="inventario.html" class="btn btn-escom btn-sm">Ver inventario</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <article class="card tarjeta-informativa">
+                        <div class="card-body">
+                            <h3 class="card-title">Registro de productos</h3>
+                            <p class="card-text small">
+                                Captura un producto nuevo mediante el formulario validado y
+                                consulta el resumen de los datos ingresados.
+                            </p>
+                            <a href="registro.html" class="btn btn-guinda btn-sm">Registrar producto</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================== PIE DE PAGINA ===================== -->
+    <footer>
+        <div class="container contenedor-footer">
+            <img src="img/logos/logo_ipn.png" alt="Logo del Instituto Politécnico Nacional" class="imagen-footer">
+
+            <div class="contenedor-central-footer">
+                <div class="bloque-texto">
+                    <p class="mb-0">Tienda IPN | Instituto Politécnico Nacional - ESCOM &copy; 2026</p>
+                    <small>Desarrollado para la materia Tecnologías para el Desarrollo de Aplicaciones Web</small>
+                </div>
+                <div class="bloque-redes">
+                    <small class="fw-bold">Redes sociales</small>
+                    <ul class="list-unstyled mb-0 lista-redes-footer">
+                        <li><a href="https://www.facebook.com/share/1BSBQNFr3F/" class="footer-link"
+                                target="_blank" rel="noopener noreferrer">Facebook: escomipnmx</a></li>
+                        <li><a href="https://www.instagram.com/escom_ipn_mx" class="footer-link" target="_blank"
+                                rel="noopener noreferrer">Instagram: escom_ipn_mx</a></li>
+                        <li><a href="https://www.tiktok.com/@escom_ipn_mx" class="footer-link" target="_blank"
+                                rel="noopener noreferrer">TikTok: escom_ipn_mx</a></li>
+                        <li><a href="https://x.com/escomunidad/" class="footer-link" target="_blank"
+                                rel="noopener noreferrer">Twitter: @escomunidad</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-2">
+                <img src="img/logos/logo_equipo.png" alt="Logo del equipo" class="imagen-footer">
+                <img src="img/logos/logo_escom.png" alt="Logo ESCOM" class="imagen-footer logo-escom-footer">
+            </div>
+        </div>
+    </footer>
+
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

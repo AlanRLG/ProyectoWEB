@@ -388,7 +388,6 @@ footer a {
 
 /* ---------- Ajustes responsivos ---------- */
 
-/* Moviles y tabletas: el pie se apila, el carrusel baja de alto y las tablas se convierten en fichas */
 @media (max-width: 768px) {
     .contenedor-footer {
         flex-direction: column;

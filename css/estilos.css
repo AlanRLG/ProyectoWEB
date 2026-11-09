@@ -363,6 +363,16 @@ footer a {
     border-color: #198754;
 }
 
+#resumenDatos,
+#resumenAcceso {
+    display: none;
+}
+
+#resumenDatos.visible,
+#resumenAcceso.visible {
+    display: block;
+}
+
 /* ---------- Informacion de la pagina de inicio ---------- */
 
 .tarjeta-informativa {
@@ -549,4 +559,3 @@ footer a {
         height: 320px;
     }
 }
-

@@ -5,6 +5,10 @@ function mostrarError(campo, mensaje, texto) {
     mensaje.classList.add("visible");
 }
 
+function escribir(id, texto) {
+    document.getElementById(id).textContent = texto;
+}
+
 function mostrarValido(campo, mensaje) {
     campo.classList.remove("campo-invalido");
     campo.classList.add("campo-valido");
@@ -31,6 +35,9 @@ if (formProducto) {
     var errorExistencias = document.getElementById("errorExistencias");
     var errorDescripcion = document.getElementById("errorDescripcion");
     var errorImagen = document.getElementById("errorImagen");
+
+    var resumenDatos = document.getElementById("resumenDatos");
+    var avisoInicial = document.getElementById("avisoInicial");
 
     formProducto.onsubmit = function (evento) {
         evento.preventDefault();
@@ -111,11 +118,25 @@ if (formProducto) {
         }
 
         if (valido === false) {
+            resumenDatos.classList.remove("visible");
+            avisoInicial.classList.remove("d-none");
             return;
         }
 
-        alert("Producto registrado correctamente.");
-        formProducto.reset();
+        /* Se muestra en pantalla lo que el usuario capturo. */
+        escribir("salidaCodigo", codigoLimpio);
+        escribir("salidaNombre", nombreLimpio);
+        escribir("salidaCategoria", categoria.value);
+        escribir("salidaPrecio", "$" + precioNumero.toFixed(2));
+        escribir("salidaExistencias", existenciasNumero);
+        escribir("salidaValor", "$" + (precioNumero * existenciasNumero).toFixed(2));
+        escribir("salidaDescripcion", descripcionLimpia);
+        escribir("salidaImagen", imagen.files[0].name);
+        escribir("salidaEstado", existenciasNumero < 10 ? "Existencia baja" : "Disponible");
+
+        avisoInicial.classList.add("d-none");
+        resumenDatos.classList.add("visible");
+        document.getElementById("resultado").scrollIntoView({ behavior: "smooth", block: "nearest" });
     };
 
     formProducto.onreset = function () {
@@ -133,6 +154,9 @@ if (formProducto) {
                 mensajes[i].textContent = "";
                 mensajes[i].classList.remove("visible");
             }
+
+            resumenDatos.classList.remove("visible");
+            avisoInicial.classList.remove("d-none");
         }, 0);
     };
 }
@@ -145,12 +169,14 @@ if (formAdmin) {
     var contrasena = document.getElementById("contrasenaAdmin");
     var errorCorreo = document.getElementById("errorCorreoAdmin");
     var errorContrasena = document.getElementById("errorContrasenaAdmin");
+    var resumenAcceso = document.getElementById("resumenAcceso");
 
     formAdmin.onsubmit = function (evento) {
         evento.preventDefault();
 
         var valido = true;
         var correoLimpio = correo.value.trim();
+        var contrasenaLimpio = contrasena.value.trim();
 
         if (correoLimpio === "") {
             mostrarError(correo, errorCorreo, "Escribe el correo electrónico.");
@@ -173,16 +199,12 @@ if (formAdmin) {
         }
 
         if (valido === false) {
+            resumenAcceso.classList.remove("visible");
             return;
         }
 
-        alert("Sesion Iniciada en: " + correoLimpio);
-        formAdmin.reset();
-        correo.classList.remove("campo-invalido", "campo-valido");
-        contrasena.classList.remove("campo-invalido", "campo-valido");
-        errorCorreo.textContent = "";
-        errorCorreo.classList.remove("visible");
-        errorContrasena.textContent = "";
-        errorContrasena.classList.remove("visible");
+        escribir("salidaCorreoAdmin", correoLimpio);
+        escribir("salidaContrasenaAdmin", contrasenaLimpio);
+        resumenAcceso.classList.add("visible");
     };
 }

@@ -14,7 +14,6 @@
 
 <body>
 
-    <!-- ===================== NAVEGACION ===================== -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -37,9 +36,20 @@
         </div>
     </nav>
 
-    <!-- ===================== CARRUSEL DE OFERTAS ===================== -->
+    
     <main class="container my-5">
-        <h1 class="visually-hidden">Ofertas de la semana de la Tienda ESCOM</h1>
+
+        <section class="seccion-institucional text-center" aria-labelledby="titulo-bienvenida">
+            <h2 id="titulo-bienvenida" class="mb-3">Bienvenidos a la tienda oficial del IPN</h2>
+            <p class="lead mb-3">
+                En esta tienda podrás comprar productos del Instituto Politécnico Nacional y de la
+                Escuela Superior de Cómputo, como ropa, accesorios, papelería y coleccionables para
+                presumir tu orgullo politécnico.
+            </p>
+            <p class="fst-italic fs-5 mb-4">“La Técnica al Servicio de la Patria”</p>
+            <a href="catalogo.html" class="btn btn-guinda px-4">Explorar el catálogo</a>
+        </section>
+
 
         <div id="carruselOfertas" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
 
@@ -118,59 +128,57 @@
             </button>
         </div>
 
-        <!-- ===================== INFORMACION DE LA TIENDA ===================== -->
-        <section class="seccion-informativa">
-            <h2 class="mb-3">Bienvenido a la Tienda ESCOM</h2>
-            <p class="text-muted mb-4">
-                La Tienda ESCOM reúne artículos institucionales del Instituto Politécnico Nacional:
-                ropa, accesorios, papelería y coleccionables. En este sitio puedes consultar el
-                catálogo, revisar las existencias del inventario y conocer las ofertas de la semana.
-            </p>
+
+
+        <section class="mt-5" aria-labelledby="titulo-institucional">
+            <h2 id="titulo-institucional" class="mb-4">Conoce al Politécnico y a ESCOM</h2>
 
             <div class="row g-4">
-                <div class="col-12 col-md-4">
-                    <article class="card tarjeta-informativa">
+                <div class="col-12 col-lg-6">
+                    <article class="card tarjeta-informativa h-100">
                         <div class="card-body">
-                            <h3 class="card-title">Catálogo de productos</h3>
-                            <p class="card-text small">
-                                Consulta los 16 artículos disponibles, organizados por categoría,
-                                con su precio y su existencia actual.
+                            <img src="img/logos/logo_ipn.png" alt="Logo del Instituto Politécnico Nacional"
+                                class="logo-institucional logo-sobre-guinda mb-3">
+                            <h3 class="card-title">Instituto Politécnico Nacional</h3>
+                            <p class="card-text">
+                            Institución educativa del Estado creada para consolidar, a través de la educación, la Independencia Económica, Científica, Tecnológica, Cultural y Política para alcanzar el progreso social de la Nación, de acuerdo con los objetivos Históricos de la Revolución Mexicana, contenidos en la Constitución Política de los Estados Unidos Mexicanos.
+                            </p><br>
+                            <p class="card-text mb-0">
+                                <strong>Misión</strong> Somos la institución de educación tecnológica de México, que genera talento profesional, de investigación e innovación para el desarrollo social, humanístico, sustentable, económico y tecnológico del país, con reconocimiento internacional, con base en el fomento de la cultura, la creatividad y emprendeduría en nuestros estudiantes, a través de la vinculación con los sectores productivo y social, con valores y principios institucionales.<br><br>
+                                <strong>Visión</strong> En el 2036 seremos la institución de educación tecnológica de calidad, con enfoque de sustentabilidad, sentido de identidad y reconocimiento Internacional, posicionándonos entre las mejores universidades del mundo, a través de la colaboración internacional con las mejores escuelas y centros de investigación, convirtiéndonos en líder por las contribuciones a la ciencia y tecnología, con impacto y sentido de responsabilidad social, respetando la diversidad y equidad de género.
                             </p>
-                            <a href="catalogo.html" class="btn btn-guinda btn-sm">Ver catálogo</a>
                         </div>
                     </article>
                 </div>
 
-                <div class="col-12 col-md-4">
-                    <article class="card tarjeta-informativa">
+                <div class="col-12 col-lg-6">
+                    <article class="card tarjeta-informativa h-100">
                         <div class="card-body">
-                            <h3 class="card-title">Control de inventario</h3>
-                            <p class="card-text small">
-                                Revisa las piezas disponibles, el valor total en almacén y los
-                                productos que se encuentran por debajo del mínimo.
+                            <img src="img/logos/logo_escom.png" alt="Logo de la Escuela Superior de Cómputo"
+                                class="logo-institucional mb-3">
+                            <h3 class="card-title">Escuela Superior de Cómputo (ESCOM)</h3>
+                            <p class="card-text">
+                                Escuela del IPN dedicada a formar profesionales en cómputo e inteligencia artificial.
                             </p>
-                            <a href="inventario.html" class="btn btn-escom btn-sm">Ver inventario</a>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="col-12 col-md-4">
-                    <article class="card tarjeta-informativa">
-                        <div class="card-body">
-                            <h3 class="card-title">Registro de productos</h3>
-                            <p class="card-text small">
-                                Captura un producto nuevo mediante el formulario validado y
-                                consulta el resumen de los datos ingresados.
+                            <ul class="mb-2">
+                                <li>Ingeniería en Sistemas Computacionales</li>
+                                <li>Ingeniería en Inteligencia Artificial</li>
+                                <li>Licenciatura en Ciencia de Datos</li>
+                            </ul>
+                            <p class="card-text mb-0">
+                                También ofrece posgrados en sistemas computacionales móviles e inteligencia artificial y
+                                ciencia de datos.<br><br>
+                            <strong>Misión</strong> La Escuela Superior de Cómputo es una Unidad Académica líder en la formación de profesionales integrales en las áreas de Sistemas Computacionales, Inteligencia Artificial y Ciencia de Datos, con amplio sentido social, contribuyendo al desarrollo tecnológico, científico y económico del país, coadyuvando a la sustentabilidad y observando estándares internacionales de calidad educativa.<br><br>
+                            <strong>Visión</strong> La Escuela Superior de Cómputo será líder en Latinoamérica en la formación integral de profesionales en el área de la computación, con estándares internacionales de calidad educativa, promoviendo la responsabilidad en sus alumnos para con su entorno, el sentido social y el respeto a la pluralidad. Propiciando la innovación    y el emprendimiento para contribuir al desarrollo económico y tecnológico del país.
                             </p>
-                            <a href="registro.html" class="btn btn-guinda btn-sm">Registrar producto</a>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
+
     </main>
 
-    <!-- ===================== PIE DE PAGINA ===================== -->
     <footer>
         <div class="container contenedor-footer">
             <img src="img/logos/logo_ipn.png" alt="Logo del Instituto Politécnico Nacional" class="imagen-footer">

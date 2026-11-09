@@ -14,7 +14,6 @@
 
 <body>
 
-    <!-- ===================== NAVEGACION ===================== -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -37,7 +36,6 @@
         </div>
     </nav>
 
-    <!-- ===================== ENCABEZADO ===================== -->
     <header class="encabezado-pagina">
         <div class="container">
             <h1>Registro de productos</h1>
@@ -46,10 +44,8 @@
 
     <main class="container pb-4">
 
-        <div class="row g-4">
-
-            <!-- ===================== FORMULARIO ===================== -->
-            <div class="col-12 col-lg-7">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
                 <section id="alta-producto" class="panel-formulario">
                     <h2 class="mb-3">Datos del producto</h2>
 
@@ -143,74 +139,10 @@
                     </form>
                 </section>
             </div>
-
-            <!-- ===================== RESULTADO ===================== -->
-            <div class="col-12 col-lg-5">
-                <section id="resultado" class="panel-formulario">
-                    <h2 class="mb-3">Datos capturados</h2>
-
-                    <p id="avisoInicial" class="text-muted">
-                        Aquí se mostrará la información que registres una vez que el formulario sea válido.
-                    </p>
-
-                    <div id="resumenDatos">
-                        <div class="alert alert-success" role="status">
-                            <strong>Producto registrado correctamente.</strong>
-                            Revisa los datos capturados antes de continuar.
-                        </div>
-
-                        <div class="table-responsive">
-                            <table class="table table-sm table-bordered align-middle mb-0">
-                                <caption class="pb-2">Resumen de lo ingresado por el usuario.</caption>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row" class="w-50">Código</th>
-                                        <td id="salidaCodigo"></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Nombre</th>
-                                        <td id="salidaNombre"></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Categoría</th>
-                                        <td id="salidaCategoria"></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Precio</th>
-                                        <td id="salidaPrecio"></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Existencias</th>
-                                        <td id="salidaExistencias"></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Valor en almacén</th>
-                                        <td id="salidaValor"></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Descripción</th>
-                                        <td id="salidaDescripcion"></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Archivo de imagen</th>
-                                        <td id="salidaImagen"></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Estado de existencias</th>
-                                        <td id="salidaEstado"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
         </div>
 
     </main>
 
-    <!-- ===================== PIE DE PAGINA ===================== -->
     <footer>
         <div class="container contenedor-footer">
             <img src="img/logos/logo_ipn.png" alt="Logo del Instituto Politécnico Nacional" class="imagen-footer">

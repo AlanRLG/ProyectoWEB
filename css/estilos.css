@@ -1,4 +1,4 @@
-/* ---------- 1. Base de la pagina ---------- */
+/* ---------- Base de la pagina ---------- */
 
 * {
     box-sizing: border-box;
@@ -33,7 +33,7 @@ a:hover {
     color: #0a6fdc;
 }
 
-/* ---------- 2. Barra de navegacion ---------- */
+/* ---------- Barra de navegacion ---------- */
 
 .navbar {
     background-color: #6b1c3a;
@@ -56,7 +56,7 @@ a:hover {
     border-bottom: 3px solid #ffffff;
 }
 
-/* ---------- 3. Pie de pagina ---------- */
+/* ---------- Pie de pagina ---------- */
 
 footer {
     background-color: #6b1c3a;
@@ -85,15 +85,10 @@ footer a {
     padding: 4px;
 }
 
-/* El logotipo de ESCOM es blanco: se muestra sin caja para que se vea sobre el guinda */
 .imagen-footer.logo-escom-footer {
     background-color: transparent;
     padding: 0;
     max-height: 100px;
-}
-
-.texto-central {
-    text-align: center;
 }
 
 .contenedor-central-footer {
@@ -133,7 +128,7 @@ footer a {
     text-decoration: underline;
 }
 
-/* ---------- 4. Carrusel de ofertas ---------- */
+/* ---------- Carrusel de ofertas ---------- */
 
 .carousel-item {
     height: 400px;
@@ -144,7 +139,6 @@ footer a {
     background-color: #075ab8;
 }
 
-/* La ilustracion de la oferta ocupa todo el espacio sin deformarse */
 .carousel-item img {
     width: 100%;
     height: 100%;
@@ -206,7 +200,7 @@ footer a {
     margin-bottom: 0;
 }
 
-/* ---------- 6. Tarjetas de indicadores y de producto ---------- */
+/* ---------- Tarjetas de indicadores y de producto ---------- */
 
 .tarjeta-indicador {
     border: none;
@@ -255,7 +249,6 @@ footer a {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
-/* La ilustracion del producto se limita en alto y se centra dentro de la tarjeta */
 .tarjeta-producto .card-img-top {
     width: 100%;
     height: 190px;
@@ -277,7 +270,7 @@ footer a {
     color: #6c757d;
 }
 
-/* ---------- 7. Botones con la identidad del proyecto ---------- */
+/* ---------- Botones con la identidad del proyecto ---------- */
 
 .btn-guinda {
     background-color: #6b1c3a;
@@ -292,20 +285,31 @@ footer a {
     color: #ffffff;
 }
 
-.btn-escom {
-    background-color: #075ab8;
-    border-color: #075ab8;
-    color: #ffffff;
+/* ---------- Seccion institucional ---------- */
+
+.seccion-institucional {
+    padding: 2rem 1.5rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-.btn-escom:hover,
-.btn-escom:focus {
-    background-color: #0a6fdc;
-    border-color: #0a6fdc;
-    color: #ffffff;
+.logo-institucional {
+    height: 110px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
 }
 
-/* ---------- 8. Tablas de inventario ---------- */
+.logo-sobre-guinda {
+    background-color: #6b1c3a;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    height: 110px;
+}
+
+
+/* ---------- Tablas de inventario ---------- */
 
 .tabla-inventario thead {
     background-color: #6b1c3a;
@@ -321,18 +325,13 @@ footer a {
     background-color: #fff4f4;
 }
 
-/* ---------- 9. Formularios y mensajes de validacion ---------- */
+/* ---------- Formularios y mensajes de validacion ---------- */
 
 .panel-formulario {
     background-color: #ffffff;
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     padding: 28px;
-}
-
-.panel-formulario .card-header {
-    background-color: #6b1c3a;
-    color: #ffffff;
 }
 
 .form-label {
@@ -364,27 +363,7 @@ footer a {
     border-color: #198754;
 }
 
-#resumenDatos {
-    display: none;
-}
-
-#resumenDatos.visible {
-    display: block;
-}
-
-#resumenAcceso {
-    display: none;
-}
-
-#resumenAcceso.visible {
-    display: block;
-}
-
-/* ---------- 10. Informacion de la pagina de inicio ---------- */
-
-.seccion-informativa {
-    margin-top: 48px;
-}
+/* ---------- Informacion de la pagina de inicio ---------- */
 
 .tarjeta-informativa {
     border: none;
@@ -397,7 +376,7 @@ footer a {
     font-size: 1.15rem;
 }
 
-/* ---------- 11. Ajustes responsivos ---------- */
+/* ---------- Ajustes responsivos ---------- */
 
 /* Moviles y tabletas: el pie se apila, el carrusel baja de alto y las tablas se convierten en fichas */
 @media (max-width: 768px) {
@@ -529,7 +508,6 @@ footer a {
         content: "Estado";
     }
 
-    /* La segunda tabla tiene columnas distintas */
     .tabla-inventario.tabla-existencias tbody tr > :nth-child(4)::before {
         content: "Existencias";
     }
@@ -566,9 +544,9 @@ footer a {
     }
 }
 
-/* Tabletas horizontales: el carrusel gana altura */
 @media (min-width: 769px) and (max-width: 992px) {
     .carousel-item {
         height: 320px;
     }
 }
+

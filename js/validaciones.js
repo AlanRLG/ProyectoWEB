@@ -1,9 +1,3 @@
-/* ============================================================
-   Validaciones de los formularios de la Tienda ESCOM.
-   Todo se ejecuta en el navegador, sin enviar datos a un servidor.
-   ============================================================ */
-
-/* Muestra el mensaje de error debajo de un campo. */
 function mostrarError(campo, mensaje, texto) {
     campo.classList.add("campo-invalido");
     campo.classList.remove("campo-valido");
@@ -11,7 +5,6 @@ function mostrarError(campo, mensaje, texto) {
     mensaje.classList.add("visible");
 }
 
-/* Marca el campo como correcto y oculta su mensaje. */
 function mostrarValido(campo, mensaje) {
     campo.classList.remove("campo-invalido");
     campo.classList.add("campo-valido");
@@ -19,12 +12,6 @@ function mostrarValido(campo, mensaje) {
     mensaje.classList.remove("visible");
 }
 
-/* Escribe un texto en un elemento de la pagina. */
-function escribir(id, texto) {
-    document.getElementById(id).textContent = texto;
-}
-
-/* ===================== REGISTRO DE PRODUCTOS ===================== */
 
 var formProducto = document.getElementById("formProducto");
 
@@ -44,9 +31,6 @@ if (formProducto) {
     var errorExistencias = document.getElementById("errorExistencias");
     var errorDescripcion = document.getElementById("errorDescripcion");
     var errorImagen = document.getElementById("errorImagen");
-
-    var resumenDatos = document.getElementById("resumenDatos");
-    var avisoInicial = document.getElementById("avisoInicial");
 
     formProducto.onsubmit = function (evento) {
         evento.preventDefault();
@@ -127,22 +111,11 @@ if (formProducto) {
         }
 
         if (valido === false) {
-            resumenDatos.classList.remove("visible");
             return;
         }
 
-        escribir("salidaCodigo", codigoLimpio);
-        escribir("salidaNombre", nombreLimpio);
-        escribir("salidaCategoria", categoria.value);
-        escribir("salidaPrecio", "$" + precioNumero.toFixed(2));
-        escribir("salidaExistencias", existenciasNumero);
-        escribir("salidaValor", "$" + (precioNumero * existenciasNumero).toFixed(2));
-        escribir("salidaDescripcion", descripcionLimpia);
-        escribir("salidaImagen", imagen.files[0].name);
-        escribir("salidaEstado", existenciasNumero < 10 ? "Existencia baja" : "Disponible");
-
-        avisoInicial.classList.add("d-none");
-        resumenDatos.classList.add("visible");
+        alert("Producto registrado correctamente.");
+        formProducto.reset();
     };
 
     formProducto.onreset = function () {
@@ -160,14 +133,10 @@ if (formProducto) {
                 mensajes[i].textContent = "";
                 mensajes[i].classList.remove("visible");
             }
-
-            resumenDatos.classList.remove("visible");
-            avisoInicial.classList.remove("d-none");
         }, 0);
     };
 }
 
-/* ===================== INICIO DE SESION SIMULADO ===================== */
 
 var formAdmin = document.getElementById("formAdmin");
 
@@ -176,7 +145,6 @@ if (formAdmin) {
     var contrasena = document.getElementById("contrasenaAdmin");
     var errorCorreo = document.getElementById("errorCorreoAdmin");
     var errorContrasena = document.getElementById("errorContrasenaAdmin");
-    var resumenAcceso = document.getElementById("resumenAcceso");
 
     formAdmin.onsubmit = function (evento) {
         evento.preventDefault();
@@ -205,11 +173,16 @@ if (formAdmin) {
         }
 
         if (valido === false) {
-            resumenAcceso.classList.remove("visible");
             return;
         }
 
-        escribir("salidaCorreoAdmin", correoLimpio);
-        resumenAcceso.classList.add("visible");
+        alert("Sesion Iniciada en: " + correoLimpio);
+        formAdmin.reset();
+        correo.classList.remove("campo-invalido", "campo-valido");
+        contrasena.classList.remove("campo-invalido", "campo-valido");
+        errorCorreo.textContent = "";
+        errorCorreo.classList.remove("visible");
+        errorContrasena.textContent = "";
+        errorContrasena.classList.remove("visible");
     };
 }

@@ -1,4 +1,4 @@
-# Tienda ESCOM — Sistema de Control de Inventario
+# Tienda IPN — Sistema de Control de Inventario
 
 Prototipo funcional para la Unidad de Aprendizaje **Tecnologías para el Desarrollo de Aplicaciones Web**, grupo 4CM5.
 
@@ -12,7 +12,7 @@ No requiere servidor ni conexión a Internet: Bootstrap 5.3.3 está guardado den
 
 ## Páginas
 
-- `index.html`: carrusel de cuatro ofertas y una sección informativa con accesos al catálogo, al inventario y al registro.
+- `index.html`: carrusel de cuatro ofertas y bienvenida a la tienda e información sobre el IPN, ESCOM y la identidad politécnica.
 - `catalogo.html`: catálogo responsivo con 16 productos e ilustraciones SVG propias.
 - `inventario.html`: tabla general y sección de existencias bajas; en pantallas angostas la tabla se convierte en fichas.
 - `registro.html`: formulario de productos con validaciones y presentación de los datos capturados.
@@ -32,6 +32,7 @@ ProyectoWEB/
 ├── js/
 │   └── validaciones.js
 ├── img/
+│   ├── institucional/
 │   ├── logos/
 │   └── productos/
 ├── vendor/
